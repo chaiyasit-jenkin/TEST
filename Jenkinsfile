@@ -20,7 +20,7 @@ pipeline {
 
     stage('TEST_ARTIFACT') {
       steps {
-        archiveArtifacts(artifacts: 'TEST_ARTIFACT', onlyIfSuccessful: true)
+        archiveArtifacts(artifacts: 'TEST', fingerprint: true)
       }
     }
 
