@@ -18,5 +18,11 @@ pipeline {
       }
     }
 
+    stage('TEST_ARTIFACT') {
+      steps {
+        archiveArtifacts(artifacts: 'TEST_ARTIFACT', onlyIfSuccessful: true)
+      }
+    }
+
   }
 }
